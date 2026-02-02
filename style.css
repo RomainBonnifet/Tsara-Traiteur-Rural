@@ -45,7 +45,9 @@ table {
 }
 /* FIN DU RESET CSS */
 
-
+body {
+    background-color: #F9F2E8;
+}
 
 header  {
     display: flex;
@@ -53,15 +55,186 @@ header  {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    background-color: #4B6A22;
+    background-color: #F9F2E8;
 }
 
 header img {
     width: fit-content;
-    max-width: 90px;
-    margin: 5px;
+    max-width: 50px;
+    margin: 2px;
 }
 
 .suppliers img {
     width: 100px;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4B6A22;
+}
+
+nav a {
+    padding: 6px;
+    text-decoration: none;
+    border: 1px solid #F9F2E8;
+    border-radius: 10px;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: bold;
+    color:#F9F2E8;
+    box-shadow: 1px 5px 20px 0px rgba(0,0,0,1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.firstWelcome {
+    height: 100%;
+}
+
+.firstWelcome img {
+    height: 110px;
+}
+
+.firstWelcome h1, .firstWelcome h2 {
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.firstWelcome h2 {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+
+div.welcomeBackground {
+    height: 30%;
+    width: 100vw;
+    background-image: url(img/Photos/bannière.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+div.welcomeBackgroundFilter {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.67);
+}
+div.welcomeBackgroundFilter img {
+    padding: 10px 0 10px 0;
+}
+
+.welcomeKeyWord {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #4B6A22;
+    border-radius: 15px;
+    max-width: 430px;
+    margin: 5px;
+    box-shadow: 7px 6px 25px -9px #615E5A;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #2b3c14;
+}
+
+.firstWelcomeKeyWordsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstWelcomeKeyWordsContainer img {
+    border: 1px solid #4B6A22;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.firstWelcome span {
+    font-weight: bold;
+}
+
+.viennoiseries {
+    flex-direction: row-reverse;
+}
+
+.seminaire {
+    flex-direction: column-reverse;
+}
+
+.seminaire h3 {
+    margin : 10px
+}
+
+section.whoAreWe h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+section.whoAreWe {
+    background-color: #4B6A22;
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 25px;
+    color: #F9F2E8;
+    width: 100%;
+    padding: 10px 0 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.whoTextContainer {
+    max-width: 450px;
+    padding: 15px 5px 20px 5px;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1040px) {
+    .firstWelcomeKeyWordsContainer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .firstWelcomeKeyWord {
+        height: 144px;
+        
+    }
+    .seminaire {
+    flex-direction: row;
+}
+
+}
+
+@media (min-width: 1200px) {
+        .firstWelcome img {
+    height: 155px;
+}
 }
