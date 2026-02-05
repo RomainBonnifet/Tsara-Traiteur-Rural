@@ -52,7 +52,7 @@ body {
 header  {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #F9F2E8;
@@ -159,6 +159,7 @@ div.welcomeBackgroundFilter img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0 20px 0;
 }
 
 .firstWelcomeKeyWordsContainer img {
@@ -167,7 +168,7 @@ div.welcomeBackgroundFilter img {
     margin: 5px;
 }
 
-.firstWelcome span {
+strong {
     font-weight: bold;
 }
 
@@ -214,6 +215,42 @@ div.whoTextContainer {
 
 
 
+section.BTC, section.BTB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    padding: 20px 10px;
+}
+
+section.BTB {
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: end;
+}
+
+section.BTC img, section.BTB img {
+ max-width: 150px;
+ border-radius: 10px;
+}
+
+section.BTC h2, section.BTB h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.BusinessTextContainer {
+    padding: 10px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -225,13 +262,30 @@ div.whoTextContainer {
     }
     .firstWelcomeKeyWord {
         height: 144px;
-        
+        margin: 40px;
     }
     .seminaire {
     flex-direction: row;
+    }
+    .business_SectionContainer {
+        display: flex;
+        flex-direction: row;
+    }
+    section.BTB {
+    flex-direction: row;
+    align-items: center;
+    text-align: end;
+    }
+    section.BTC img, section.BTB img {
+    max-width: 220px;
+    border-radius: 10px;
+    }
+    div.whoTextContainer {
+    max-width: 650px;
+}
 }
 
-}
+
 
 @media (min-width: 1200px) {
         .firstWelcome img {
