@@ -184,14 +184,14 @@ strong {
     margin : 10px
 }
 
-section.whoAreWe h2 {
+section.whoAreWe h2, section.services h2 {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 24px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 0;
 }
 
-section.whoAreWe {
+section.whoAreWe, section.services {
     background-color: #4B6A22;
     font-family: 'Montserrat', serif;
     font-size: 16px;
@@ -208,10 +208,19 @@ section.whoAreWe {
 }
 
 div.whoTextContainer {
-    max-width: 450px;
+    /* max-width: 450px; */
     padding: 15px 5px 20px 5px;
 }
 
+section.whoAreWe img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+section.whoAreWe p {
+    max-width: 340px;
+}
 
 
 
@@ -221,17 +230,23 @@ section.BTC, section.BTB {
     align-items: center;
     max-width: 450px;
     padding: 20px 10px;
+    color: #2b3c14;
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 22px;
 }
 
 section.BTB {
     flex-direction: row-reverse;
-    align-items: center;
-    text-align: end;
 }
 
+
 section.BTC img, section.BTB img {
- max-width: 150px;
- border-radius: 10px;
+ max-width: 130px;
+ border-radius: 20px;
+ padding: 10px;
 }
 
 section.BTC h2, section.BTB h2 {
@@ -241,8 +256,37 @@ section.BTC h2, section.BTB h2 {
     padding-bottom: 20px;
 }
 
-.BusinessTextContainer {
-    padding: 10px;
+.BTCTextContainer, .BTBTextContainer {
+    height: 100%;
+}
+
+section.services p {
+    max-width: 800px;
+    padding: 20px;
+}
+
+
+
+
+@media (min-width: 1000px) {
+    section.whoAreWe {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    div.whoTextContainer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section.whoAreWe p {
+    max-width: 600px;
+    font-size: 16px;
+    }
+    section.whoAreWe h2, section.services h2 {
+    font-size: 28px;
+    }
 }
 
 
@@ -250,12 +294,7 @@ section.BTC h2, section.BTB h2 {
 
 
 
-
-
-
-
-
-@media (min-width: 1040px) {
+@media (min-width: 1080px) {
     .firstWelcomeKeyWordsContainer {
         flex-direction: row;
         justify-content: space-evenly;
@@ -277,18 +316,27 @@ section.BTC h2, section.BTB h2 {
     text-align: end;
     }
     section.BTC img, section.BTB img {
-    max-width: 220px;
-    border-radius: 10px;
+    max-width: 180px;
+    border-radius: 20px;
     }
     div.whoTextContainer {
     max-width: 650px;
-}
+    }
 }
 
 
 
 @media (min-width: 1200px) {
-        .firstWelcome img {
-    height: 155px;
+    .viennoiseries img, .brunch img {
+        height: 200px;
+        border-radius: 10px;
+    }
+    .seminaire {
+        height: 216px;
+    }
+    section.whoAreWe img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
 }
 }
