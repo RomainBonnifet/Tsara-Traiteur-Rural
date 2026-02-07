@@ -213,7 +213,7 @@ div.whoTextContainer {
 }
 
 section.whoAreWe img {
-    width: 250px;
+    width: 300px;
     margin: 10px;
     border-radius: 10px;
 }
@@ -226,6 +226,7 @@ section.whoAreWe p {
 
 section.BTC, section.BTB {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     max-width: 450px;
@@ -238,13 +239,10 @@ section.BTC, section.BTB {
     line-height: 22px;
 }
 
-section.BTB {
-    flex-direction: row-reverse;
-}
 
 
 section.BTC img, section.BTB img {
- max-width: 130px;
+ max-width: 300px;
  border-radius: 20px;
  padding: 10px;
 }
@@ -256,16 +254,33 @@ section.BTC h2, section.BTB h2 {
     padding-bottom: 20px;
 }
 
+section.BTC p, section.BTB p {
+    margin: 10px;
+}
+
 .BTCTextContainer, .BTBTextContainer {
     height: 100%;
 }
 
 section.services p {
     max-width: 800px;
-    padding: 20px;
+    margin: 20px;
 }
 
+section.formule {
+    width: 100%;
+}
 
+section.formules img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.formules {
+    display: flex;
+    flex-direction: column;
+}
 
 
 @media (min-width: 1000px) {
@@ -274,21 +289,25 @@ section.services p {
         justify-content: center;
         align-items: center;
     }
+
     div.whoTextContainer {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    section.whoAreWe p {
-    max-width: 600px;
-    font-size: 16px;
-    }
-    section.whoAreWe h2, section.services h2 {
-    font-size: 28px;
-    }
-}
 
+    section.whoAreWe p {
+        max-width: 800px;
+        font-size: 16px;
+    }
+
+    section.whoAreWe h2,
+    section.services h2 {
+        font-size: 28px;
+    }
+
+}
 
 
 
@@ -309,19 +328,23 @@ section.services p {
     .business_SectionContainer {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
     }
-    section.BTB {
+    section.BTB, section.BTC {
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     text-align: end;
     }
     section.BTC img, section.BTB img {
-    max-width: 180px;
+    max-width: 220px;
     border-radius: 20px;
     }
     div.whoTextContainer {
     max-width: 650px;
     }
+
 }
 
 
@@ -338,5 +361,17 @@ section.services p {
     width: 300px;
     margin: 10px;
     border-radius: 10px;
-}
+    }
+    .BTC p, .BTB p {
+        width: 300px;
+    }
+    .formules {
+    display: flex;
+    flex-direction: row;
+    }
+    .formules img {
+        margin: 0 10px;
+        border-radius: 10px;
+    }
+
 }
