@@ -5,6 +5,7 @@ body {
     font-size: 10px;
     line-height: 1.6;
 	font-family: 'Montserrat', sans-serif;
+	background-color: #EEEBEB;
 }
 
 main {
@@ -125,14 +126,11 @@ div.welcomeKeyWord {
 	height: 100%;
 	max-width: 300px;
 	font-size: 1.2rem;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-
 	text-align: center;
-
 	background-color: #4C6B24;
 	color: aliceblue;
 	margin: 5px;
@@ -166,7 +164,7 @@ div.whoContainer h2 {
 }
 
 div.whoContainer img {
-	width: 300px;
+	max-width: 250px;
 	margin: 10px;
 	border-radius: 10px;
 }
@@ -180,6 +178,7 @@ div.whoTextContainer {
 
 div.whoTextContainer p {
 	margin: 10px;
+	max-width: 500px;
 }
 
 
@@ -215,6 +214,7 @@ div.BTB_Container {
 	margin-top: 20px;
 	border: #B0D91C 2px solid;
 	border-radius: 5px;
+	padding: 10px;
 }
 
 div.BTC_TextContainer,
@@ -292,7 +292,7 @@ div.formulesImgContainer {
 
 
 .suppliersContainer img {
-	width: 150px;
+	width: 90px;
 	display: flex;
 }
 
