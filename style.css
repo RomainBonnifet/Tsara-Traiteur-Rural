@@ -4,7 +4,6 @@ body {
 	padding: 0;
     font-size: 10px;
     line-height: 1.6;
-	font-size: clamp(12px, 1.5vw + 1rem, 22px);
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -23,6 +22,7 @@ h3 {
 	margin: 5px;
 	font-weight: normal;
 }
+
 
 section {
 	width: 100%;
@@ -70,10 +70,13 @@ header nav {
 
 /* WELCOME */
 
+h1 {
+	text-transform: uppercase;
+}
 
 div.welcomeBackground {
 
-	height: 45vh;
+	height: 60vh;
 	width: 100vw;
     background-image: url(img/Photos/bannière.jpg);
     background-size:cover;
@@ -83,7 +86,7 @@ div.welcomeBackground {
 
 div.welcomeBackgroundFilterContainer {
 
-	height: 45vh;
+	height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,6 +161,10 @@ div.whoContainer {
 	align-items: center;
 }
 
+div.whoContainer h2 {
+	font-weight: bold;
+}
+
 div.whoContainer img {
 	width: 300px;
 	margin: 10px;
@@ -166,7 +173,9 @@ div.whoContainer img {
 
 div.whoTextContainer {
 	max-width: 600px;
-	font-size: 1.1rem;
+	font-size: 1rem;
+	line-height: 1.7;
+	padding: 10px;
 }
 
 div.whoTextContainer p {
@@ -184,6 +193,12 @@ div.businessContainer {
 	justify-content: space-between;
 	width: 100%;
 	margin-bottom: 10px;
+	font-size: 1rem;
+	color: #3b4809;
+}
+
+div.businessContainer h3 {
+	font-weight: bold;
 }
 
 div.businessContainer img {
@@ -227,6 +242,11 @@ div.servicesContainer {
 	justify-content: center;
 	color: aliceblue;
 	margin: 20px;
+	font-size: 1rem;
+}
+
+div.servicesContainer h2 {
+	font-weight: bold;
 }
 
 div.servicesTextContainer {
@@ -246,6 +266,12 @@ div.formulesContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-size: 1rem;
+}
+
+div.formulesContainer h2 {
+	font-weight: bold;
+	color: #3b4809;
 }
 
 div.formulesImgContainer {
@@ -255,7 +281,7 @@ div.formulesImgContainer {
 	width: 100%;
 }
  div.formulesImgContainer img {
-	max-width: 90%;
+	width: 90%;
 	border-radius: 10px;
 	margin: 10px;
  }
@@ -266,7 +292,7 @@ div.formulesImgContainer {
 
 
 .suppliersContainer img {
-	width: 180px;
+	width: 150px;
 	display: flex;
 }
 
@@ -280,6 +306,9 @@ div.suppliersImgContainer {
 .suppliersContainer a {
 	margin-top: 20px;
 	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #3b4809;
 }
 
 
@@ -296,12 +325,14 @@ div.footerContact {
 }
 
 div.footerContact i {
-	font-size: 48px;
+	font-size: 24px;
 }
 
 div.footerContact a {
+	text-align: center;
 	text-decoration: none;
 	color: aliceblue;
+	font-size: 1rem;
 }
 
 
