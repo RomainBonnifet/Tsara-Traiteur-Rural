@@ -98,17 +98,29 @@ div.welcomeBackgroundFilterContainer {
 	text-align: center;
 }
 
+div.welcomeBackgroundFilterContainer h1,
+div.welcomeBackgroundFilterContainer h2 {
+	animation: opacity 3s ease-in
+}
+
 div.welcomeBackgroundFilterContainer img {
     padding: 10px 0 10px 0;
-	max-height: 100px;
+	max-height: 200px;
 	width: auto;
+	animation:
+		slideFromTop 1s ease forwards,
+		rotation 0.8s ease 1s;
+
 }
+
+
 
 div.welcomeKeyWordsContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
 }
 
 h3.welcomeText {
@@ -116,14 +128,10 @@ h3.welcomeText {
 	text-align: center;
 }
 
-.viennoiseries h3,
-.seminaire h3 {
-	padding: 10px;
-}
 
 div.welcomeKeyWord {
 	min-height: 50vh;
-	height: 100%;
+	height: 600px;
 	max-width: 300px;
 	font-size: 1.2rem;
 	display: flex;
@@ -135,6 +143,9 @@ div.welcomeKeyWord {
 	color: aliceblue;
 	margin: 5px;
 	border-radius: 5px;
+
+	animation-duration: 3s;
+	animation-name: slideInFromBottom;
 }
 
 div.welcomeKeyWord img {
@@ -443,4 +454,33 @@ div.footerContact a {
 		text-align: center;
 	}
 
+}
+
+/* KEYFRAMES */
+
+@keyframes slideFromTop {
+	from {
+		transform: translateY(-300px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
