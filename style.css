@@ -27,7 +27,7 @@ h3 {
 
 section {
 	width: 100%;
-	margin-top: 40px;
+	margin-top: 50px;
 }
 
 html {
@@ -52,8 +52,8 @@ div.navBtnsContainer {
 
 div.navBtnsContainer a {
 	text-decoration: none;
-	color: aliceblue;
-	font-size: 16px;
+	color: #3b4809;
+	font-size: 12px;
 	background-color: #B0D91C;
 	border: 1px solid #3b4809;
 	font-weight: bold;
@@ -62,7 +62,7 @@ div.navBtnsContainer a {
 	box-shadow: 5px 5px 5px -5px #000000;
 }
 
-header nav {
+header {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -74,6 +74,7 @@ header nav {
 
 h1 {
 	text-transform: uppercase;
+	text-align: center;
 }
 
 div.welcomeBackground {
@@ -92,10 +93,10 @@ div.welcomeBackgroundFilterContainer {
 	width: 100vw;
     display: flex;
     flex-direction: column;
+	justify-content: space-evenly;
     align-items: center;
-    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.67);
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	color: aliceblue;
 	text-align: center;
 }
@@ -103,12 +104,17 @@ div.welcomeBackgroundFilterContainer {
 div.welcomeBackgroundFilterContainer h1,
 div.welcomeBackgroundFilterContainer h2 {
 		animation:
-		slideFromTop 1.5s ease-in-out forwards
+		slideFromTop 1.5s ease-in-out forwards;
+}
+
+div.welcomeBackgroundFilterContainer a {
+	text-decoration: none;
+	color: aliceblue;
 }
 
 div.welcomeBackgroundFilterContainer img {
     padding: 10px 0 10px 0;
-	max-height: 200px;
+	max-height: 150px;
 	width: auto;
 	animation:
 		slideFromTop 2s ease-in-out forwards

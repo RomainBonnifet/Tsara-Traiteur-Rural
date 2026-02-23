@@ -29,7 +29,7 @@ const leftTranslateXObserver = new IntersectionObserver((entries)=>{
                 {transform: "translateX(-300px)"},
                 {transform: "translateX(0px)"}
             ], 
-                {duration: 1000}
+                {duration: 500}
         )
             leftTranslateXObserver.unobserve(entry.target);
         }
@@ -47,7 +47,7 @@ const rightTranslateXObserver = new IntersectionObserver((entries)=>{
                 {transform: "translateX(300px)"},
                 {transform: "translateX(0px)"}
             ], 
-                {duration: 1000}
+                {duration: 500}
         )
             rightTranslateXObserver.unobserve(entry.target);
         }
