@@ -27,6 +27,7 @@ h3 {
 
 section {
 	width: 100%;
+	margin-top: 40px;
 }
 
 html {
@@ -77,7 +78,7 @@ h1 {
 
 div.welcomeBackground {
 
-	height: 60vh;
+	height: 95vh;
 	width: 100vw;
     background-image: url(img/Photos/bannière.jpg);
     background-size:cover;
@@ -87,20 +88,22 @@ div.welcomeBackground {
 
 div.welcomeBackgroundFilterContainer {
 
-	height: 60vh;
+	height: 95vh;
+	width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.67);
-	font-size: 1rem;
+	font-size: 1.2rem;
 	color: aliceblue;
 	text-align: center;
 }
 
 div.welcomeBackgroundFilterContainer h1,
 div.welcomeBackgroundFilterContainer h2 {
-	animation: opacity 3s ease-in
+		animation:
+		slideFromTop 1.5s ease-in-out forwards
 }
 
 div.welcomeBackgroundFilterContainer img {
@@ -108,9 +111,7 @@ div.welcomeBackgroundFilterContainer img {
 	max-height: 200px;
 	width: auto;
 	animation:
-		slideFromTop 1s ease forwards,
-		rotation 0.8s ease 1s;
-
+		slideFromTop 2s ease-in-out forwards
 }
 
 
@@ -144,8 +145,6 @@ div.welcomeKeyWord {
 	margin: 5px;
 	border-radius: 5px;
 
-	animation-duration: 3s;
-	animation-name: slideInFromBottom;
 }
 
 div.welcomeKeyWord img {
@@ -235,6 +234,8 @@ div.BTB_TextContainer {
 	min-height: 100%;
 	max-width: 500px;
 }
+
+
 
 div.businessContainer p {
 	margin: 8px;
@@ -346,6 +347,101 @@ div.footerContact a {
 	font-size: 1rem;
 }
 
+/* ========================================= */
+/* CAROUSEL                   */
+/* ========================================= */
+
+/* ========================================= */
+/* CAROUSEL - FORMAT VERTICAL RESPONSIVE     */
+/* ========================================= */
+
+section.carousel {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 40px 0;
+}
+
+.carousel h2 {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #3b4809;
+}
+
+div#carousel {
+	display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+    position: relative;
+    width: 90%;
+    max-width: 1000px; /* Élargi pour bien afficher les 3 photos */
+    overflow: hidden; 
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+	width: 100%;
+    /* On s'assure qu'aucun espace parasite ne s'ajoute */
+    gap: 0;
+}
+
+/* Format mobile par défaut (1 image) */
+.slide {
+    flex: 0 0 100%; 
+    box-sizing: border-box;
+    padding: 0 5px; /* Petit espace entre les photos */
+}
+
+.slide img {
+    width: 100%;
+    aspect-ratio: 3/4; /* Force un format portrait (vertical) */
+    object-fit: cover; 
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Boutons de navigation */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(76, 107, 36, 0.8); 
+    color: aliceblue;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #B0D91C; 
+    color: #3b4809;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Format Desktop (3 images) */
+@media screen and (min-width: 1000px) {
+    .slide {
+        flex: 0 0 33.333%; /* Force exactement un tiers */
+    }
+}
 
 /* =============== RESPONSIVE ============== */
 
@@ -353,7 +449,7 @@ div.footerContact a {
 @media screen and (min-width: 1000px) {
 
 	div.welcomeBackgroundFilterContainer img {
-		max-height: 200px;
+		max-height: 300px;
 	}
 
 	div.welcomeKeyWordsContainer {
@@ -460,21 +556,13 @@ div.footerContact a {
 
 @keyframes slideFromTop {
 	from {
-		transform: translateY(-300px);
+		transform: translateY(-600px);
 	}
 	to {
 		transform: translateY(0);
 	}
 }
 
-@keyframes opacity {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 
 @keyframes rotation {
 	from {
